@@ -1,7 +1,7 @@
-<h1>POSTCSS BOILERPLATE</h1>
+<h1>MODEST LAYOUT</h1>
 
 ##
-## Help you to Build an Basic HTML-SCSS
+## MODEST LAYOUT SO BEAUTIFUL
 ##
 ##
 
