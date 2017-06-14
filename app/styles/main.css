@@ -16,9 +16,10 @@ body{
 
 
 .bg{
-    background: url('../../image/bg.png') no-repeat;
+    background: url('../../image/bg.png') no-repeat fixed;
     background-color: rgba(255, 255, 255,0.5);
-    background: cover;
+    background-size: cover;
+    background-position: center;
     
     height: 650px;
     color:#fff;
@@ -50,6 +51,7 @@ body{
 
 /* ==================End Background and banner=============== */
 .motto{
+    margin-bottom: 80px;
     .head-motto{
         margin-bottom:30px;
         margin-top:20px;
@@ -74,24 +76,38 @@ body{
                     height: 60px;
                     text-align: center;
                     line-height:60px;
-                    margin-left:-3px;
+                    margin-left:-2px;
+                    &:hover{
+                        opacity: 0.8;
+                        cursor: pointer;
+                    }
                 }
             }
         }
         .right-motto-content{
+            padding-right:0;
             .spirit{
+                margin-bottom: 20px;
+                height: 80px;
                 .number{
+                    position: relative;
                     background: #23b7a4;
                     text-align: center;
-                    height: 33px;
+                    height: 37px;
                     padding: 0;
                     h6{
                         color:#fff;
+                        margin-top:12px;
                     }
                 }
                 .spirit-content{
+                    position: relative;
+                    padding-right: 0;
                     h4{
                         margin-top:0;
+                    }
+                    p{
+                        color:#8d8f92;
                     }
                 }
             }
@@ -99,3 +115,108 @@ body{
     }
 }
 
+/* ==================End Motto=============== */
+        
+.myTeam{
+    margin-bottom:100px;
+    .members{
+        .head-member{
+            margin-bottom:40px;
+            margin-top:30px;
+            h3{
+                border-left: 10px solid #e1e6ea;
+                box-sizing:border-box;
+                padding-left: 12px;  
+                padding-top:5px; 
+            }
+        }
+        .list-member{
+            .member{
+                &:hover{
+                    cursor: pointer;
+                    img{
+                        opacity: 0.5;
+                    }
+                    .information{
+                        background: #3a454d;
+                        color:#fff;
+                    }
+                }
+                padding-right:5px;
+            
+                .information{
+                    background: #e1e6ea;
+                    padding: 10px 0px 10px 20px;
+                    h4{
+                        font-size:16px;
+                        margin:6px 0;
+                    }
+                    .competence{
+                        color: #a6a9ac;
+                    }
+                }
+            }
+        }
+    }
+}     
+        
+
+
+
+/* ==================End MyTeam=============== */
+
+.lovely-Work{
+    padding: 60px;
+    background: #3a454d;
+        .head-lovely-work{
+            margin-bottom:40px;
+            margin-top:30px;
+            h3{
+                border-left: 10px solid #4e5a62;
+                box-sizing:border-box;
+                padding-left: 12px;  
+                padding-top:5px;
+                color:#e1e6ea; 
+                font-size: 25px;
+            }
+        }
+        .all-works{
+            .work{
+                margin-bottom: 25px;
+                padding-right:0;
+                position: relative;
+                span{
+                    position: absolute;
+                    display: none;
+                }
+                .text{
+                    position: absolute;
+                    top:210px;  
+                    background: #292f36;
+                    color:#fff;
+                    font-size:20px;
+                    width: 96%;
+                    padding:20px 0 20px 18px;
+                }
+                .icon-plus{
+                    color:#fff;
+                    font-size: 20px;
+                    top:100.5px;
+                    left:190px;
+                }
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+                &:hover{
+                    span{
+                        display: inline;
+                    }
+                    img{
+                        opacity: 0.4;
+                        cursor: pointer;
+                    }
+                }            
+            }
+        }
+}
