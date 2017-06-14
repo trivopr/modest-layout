@@ -1,1 +1,101 @@
-@import 'about.css';
+@import 'header.css';
+
+
+
+body{
+    font-family: Arial,sans-serif;
+    margin:0;
+    padding:0;
+}
+.container{
+    width:1140px;
+    margin:0 auto;
+    padding:0;
+}
+
+
+
+.bg{
+    background: url('../../image/bg.png') no-repeat;
+    background-color: rgba(255, 255, 255,0.5);
+    background: cover;
+    
+    height: 650px;
+    color:#fff;
+    .text-banner{
+        margin-top: 100px;
+        h3{
+            font-size:26px;
+            margin-bottom: 18px;
+        }
+        p{
+            font-weight: none;
+            opacity:0.7;
+            margin-bottom: 35px;
+        }
+        input[type="submit"]{
+            background: transparent;
+            border: 1px solid #fff;
+            margin-right: 7px;
+            box-sizing: border-box;
+            &:hover{
+                background: #23b7a4;
+                
+                border:none;
+            }
+        }
+    }
+}
+
+
+/* ==================End Background and banner=============== */
+.motto{
+    .head-motto{
+        margin-bottom:30px;
+        margin-top:20px;
+        h3{
+            border-left: 7px solid #e1e6ea;
+            box-sizing:border-box;
+            padding-left: 12px;   
+        }
+    }
+    .motto-content{
+        .left-motto-content{
+            p{
+                color:#8d8f92;
+                margin-bottom: 25px;
+            }
+            .motto-icon{
+               padding-top: 15px;
+                .icon{
+                    background: #c8cdd0;
+                    display: inline-block;
+                    width: 60px;
+                    height: 60px;
+                    text-align: center;
+                    line-height:60px;
+                    margin-left:-3px;
+                }
+            }
+        }
+        .right-motto-content{
+            .spirit{
+                .number{
+                    background: #23b7a4;
+                    text-align: center;
+                    height: 33px;
+                    padding: 0;
+                    h6{
+                        color:#fff;
+                    }
+                }
+                .spirit-content{
+                    h4{
+                        margin-top:0;
+                    }
+                }
+            }
+        }
+    }
+}
+
