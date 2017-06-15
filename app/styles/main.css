@@ -168,6 +168,7 @@ body{
 .lovely-Work{
     padding: 60px;
     background: #3a454d;
+    margin-bottom: 80px;
         .head-lovely-work{
             margin-bottom:40px;
             margin-top:30px;
@@ -217,6 +218,117 @@ body{
                         cursor: pointer;
                     }
                 }            
+            }
+        }
+        
+
+        .footer-lovely-work{
+            text-align: center;
+            margin-top:40px;
+            .show-more{
+                background: transparent;
+                border: 3px solid #fff;
+                padding: 8px 23px;
+                &:hover{
+                    background: #3b7ced;
+                }
+            }
+        }
+}
+
+/* ==================End lovely work=============== */
+
+.mission{
+    .mission-content{
+        .head-mission{
+            margin-bottom:40px;
+            margin-top:30px;
+            h3{
+                border-left: 10px solid #e1e6ea;
+                box-sizing:border-box;
+                padding-left: 12px;  
+                padding-top:5px;
+                font-size: 25px;
+                font-weight: bold;
+            }
+        }
+        
+
+        .all-mission{
+            text-align: center;
+            .mission{
+                margin-bottom: 65px;
+                img{
+                    margin-bottom: 20px;
+                }
+                h4{
+                    margin-bottom: 15px;
+                    font-weight: bold;
+                    font-size: 20px
+                }
+                p{
+                    font-size:17px;
+                    color:#b0b1b3;
+                }
+            }
+        }
+    }
+}
+
+    /* ==================End Feature=============== */
+
+.features{
+    padding: 60px;
+    padding-bottom:120px;
+    background: #3a454d;
+    margin-bottom: 60px;
+        .head-feature{
+            margin-bottom:40px;
+            margin-top:0px;
+            h3{
+                border-left: 10px solid #4e5a62;
+                box-sizing:border-box;
+                padding-left: 12px;  
+                padding-top:5px;
+                color:#e1e6ea; 
+                font-size: 25px;
+            }
+        }
+        
+
+        .all-feature{
+            color:#fff;
+            .feature{
+                img{
+                    margin-bottom: 35px;
+                }
+                h4{
+                    font-size: 20px;
+                    margin-bottom:20px;
+                }
+                p{
+                    color: #dcdfe1;
+                    line-height: 1.7em;
+                    font-size: 14px;
+                }
+            }
+        }
+}
+
+        /* ==================End Feature =============== */
+.map{
+    padding-top: 0px;
+    padding-bottom:120px;
+    margin-bottom: 80px;
+        .head-map{
+            margin-bottom:60px;
+            margin-top:0px;
+            h3{
+                border-left: 10px solid #e1e6ea;
+                box-sizing:border-box;
+                padding-left: 12px;  
+                padding-top:5px;
+                font-size: 25px;
             }
         }
 }
