@@ -155,6 +155,26 @@ body{
                         color: #a6a9ac;
                     }
                 }
+                .image-member{
+                    position: relative;
+                    text-align: center;
+                    z-index: 1;
+                    .personal{
+                        position: absolute;
+                        text-align: center;
+                        left:53px;
+                        top:125px;
+                        z-index: 2;
+                        a{
+                            display: inline-block;
+                            width: 50px;
+                            height: 50px;
+                            background: #3a454d;
+                            text-align: center;
+                            line-height: 50px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -331,4 +351,68 @@ body{
                 font-size: 25px;
             }
         }
+        .map-footer{
+            margin-bottom:80px;
+            .left-footer-content{
+                margin-top:40px;
+                h3{
+                    margin-bottom: 30px;
+                    margin-left: 12px;
+                }
+                p{
+                    margin-bottom: 20px;
+                    opacity: 0.6;
+                }
+            }
+            .right-footer-content{
+                position: relative;
+                .form{
+                    position: absolute;
+                    width: 100%;
+                    height: 500px;
+                    padding:20px;
+                    top:-100px;
+                    background: #fff;
+                    input[type="text"],textarea{
+                        width: 100%;
+                        background: #eaeef1;
+                        border:none;
+                        border-radius:5px;
+                        -webkit-border-radius:5px;
+                        -moz-border-radius:5px;
+                         margin-bottom:20px;
+                    }
+                     input[type="text"]{
+                         height: 40px;
+                        
+                     }
+                     h4{
+                         color:#8d8f92;
+                     }
+                     input[type="submit"]{
+                         background:#23b7a4;
+                         padding:10px 30px;
+                     }
+                }
+            }
+        }
+}
+
+
+
+/* ==================End Map =============== */
+
+footer{
+    background: #3a454d;
+    color:#fff;
+    padding-top:40px;
+    padding-bottom: 25px;
+    .right-footer{
+        padding-right: 0;
+       
+        img{
+            margin-left: 20px;
+            float: right;
+        }
+    }
 }

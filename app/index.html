@@ -41,7 +41,7 @@
 
     <!--  =================== End Header Navbar ========================-->
 
-    <section class="bg">    
+    <section class="bg" data-type="bg" data-speed="5" >    
         <div class="container">
             <div class="rows">
                 <div class="text-banner col-md-6">
@@ -138,6 +138,11 @@
                     <div class="member col-sm-3">
                        <div class="image-member">
                             <img src="image/member1.png" alt="memberAvatar">
+                            <div class="personal">
+                                <a href="#"><img src="image/twitter.png" alt="icon"></a>
+                                <a href="#"><img src="image/facebook.png" alt="icon"></a>
+                                <a href="#"><img src="image/instagram.png" alt="icon"></a>
+                            </div>
                         </div><!--end-image-member-->
                         <div class="information">
                             <h4 class="name"> GLORIA BROMLEY </h4>
@@ -338,6 +343,10 @@
 
                 </div><!--end-all-feature-->
 
+               <!--  ===================End Features ========================-->
+
+
+
             </div><!--end-rows-->
         </div><!--container-->
     </section><!--End-feature-->
@@ -354,16 +363,85 @@
         <div id="map" style="width:100%;height:400px"></div>
         <script>
                 function myMap() {
+                    var uluru=  {lat: 10.826553, lng: 106.679883};
                     var mapOptions = {
                         center: new google.maps.LatLng(10.826553, 106.679883),/* -->Tọa độ center map */
                         zoom: 15,/* -->Độ zoom gần của map (càng lớn càng gần) */
                         mapTypeId: google.maps.MapTypeId.ROADMAP/* -->ROADMAP là chế độ chỉ đường , (có các chế độ khác như vệ tinh v.v..) */
                     }
                 var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                var marker = new google.maps.Marker({
+                        position: uluru,
+                        map: map
+                    });
                 }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+        <div class="container">
+            <div class="rows map-footer">
+
+                <div class="left-footer-content col-sm-6">
+                    <h3> CONTACT INFORMATION </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi pariatur quasi id libero ex quisquam. Maiores repudiandae qui ratione rerum distinctio aliquam quas quasi, quidem architecto facere reiciendis, sunt eos!</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sint, eum ab repudiandae deserunt repellendus iste</p>
+                </div><!--left-footer-content-->
+
+                <div class="right-footer-content col-sm-6">
+                    <form action="" method="POST" class="form">
+                        <div class="rows">
+                            <div class="col-sm-6 name">
+                                <h4> Name </h4>
+                                <input type="text">
+                            </div><!--name-->
+
+                            <div class="col-sm-6 mail">
+                                <h4> Your Email </h4>
+                                <input type="text">
+                            </div><!--mail-->
+                            <div class="col-sm-12 message">
+                                <h4> Your Message </h4>
+                                <textarea name="" id="" cols="60" rows="10"></textarea>
+                            </div><!--message-->
+
+                            <div class="col-sm-3 send">
+                                <input type="submit" class="btn btn-info" value="Send Message">
+                            </div><!--send-->
+                        </div><!--rows-->
+                    </form>
+                </div><!--right-footer-content-->
+
+            </div><!--footer-map-->
+        </div> <!--container-->
     </section><!--map-->
+
+<!--  ===================End Map ========================-->
+
+
+<footer>    
+    <div class="container">
+        <div class="rows">
+            <div class="col-sm-4 left-footer">
+                <p>&copy; Copyright 2014 by PSD Booster. All Rights Reserved</p>
+            </div><!--end-left-footer-->
+
+            <div class="col-sm-3 col-sm-offset-5 right-footer">
+                <img src="image/instagram.png" alt="icon">
+                <img src="image/be.png" alt="icon">
+                <img src="image/skype.png" alt="icon">
+                <img src="image/facebook1.png" alt="icon">
+                <img src="image/twitter.png" alt="icon">
+            </div><!--right-footer-->
+        </div>
+    </div>
+</footer>
+
+
+
+<!--  ===================End Footer ========================-->
+        <script src="assets\js\jquery-2.1.4.min.js"></script>	
+		<script src="assets\js\main.js"></script>	
+		<script src="assets\js\bootstrap.min.js"></script>
 </body>
 
 </html>
