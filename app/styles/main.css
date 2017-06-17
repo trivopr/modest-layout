@@ -1,5 +1,8 @@
 @import 'header.css';
-
+@import 'bg.css';
+.clear-fix{
+    clear: both;
+}
 header{
     background: #1d2126;
     /*position: fixed;
@@ -8,7 +11,14 @@ header{
     .header{
         padding-top: 22px;
         .logo{
-           padding-top:5px;
+           position: relative;
+           h1{
+               margin:0;
+               text-align: top;
+               img{
+                   position: absolute;
+               }
+           }
         }
         .navbar{
             
@@ -22,9 +32,11 @@ header{
                         color:#fff;
                         font-size:12px;
                         padding: 3px 7px;
+                        border:1px solid transparent;
                         &:hover{
                             background: none;
                             border:1px solid #5b6168;
+                           
                             border-radius:5px;
                             -webkit-border-radius:5px;
                             -moz-border-radius:5px;
@@ -35,11 +47,11 @@ header{
                         a{
                             color:#23b7a4;
                             border:1px solid #23b7a4;
+                            font-size:14px;
                             border-radius:5px;
                             -webkit-border-radius:5px;
                             -moz-border-radius:5px;
-                                &:hover{
-                                     
+                                &:hover{   
                                     border:1px solid #23b7a4;
                                     font-size:14px;
                             }
@@ -69,8 +81,8 @@ body{
 
 
 
-.bg{
-    background: url('../../image/bg.png') no-repeat fixed;
+#bg{
+    
     background-color: rgba(255, 255, 255,0.5);
     background-size: cover;
     background-position: center;
@@ -104,7 +116,7 @@ body{
 
 
 /* ==================End Background and banner=============== */
-.motto{
+#motto{
     margin-bottom: 80px;
     .head-motto{
         margin-bottom:30px;
@@ -123,7 +135,7 @@ body{
             }
             .motto-icon{
                padding-top: 15px;
-                .icon{
+                li{
                     background: #c8cdd0;
                     display: inline-block;
                     width: 60px;
@@ -171,7 +183,7 @@ body{
 
 /* ==================End Motto=============== */
         
-.myTeam{
+#myTeam{
     margin-bottom:100px;
     .members{
         .head-member{
@@ -187,10 +199,7 @@ body{
         .list-member{
             .member{
                 &:hover{
-                    cursor: pointer;
-                    img{
-                        opacity: 0.5;
-                    }
+                  
                     .information{
                         background: #3a454d;
                         color:#fff;
@@ -213,7 +222,25 @@ body{
                     position: relative;
                     text-align: center;
                     z-index: 1;
+                    .image{
+                        position: relative;
+                        width: 265px;
+                        height: 300px;
+                        overflow: hidden;
+                        img{
+                            position: absolute;
+                            z-index: 2;
+                            top:0;
+                            left:0;
+                        }
+                        .support-image img{
+                            opacity: 0;
+                        }
+                        
+                       
+                    }
                     .personal{
+                        display: none;
                         position: absolute;
                         text-align: center;
                         left:53px;
@@ -228,18 +255,40 @@ body{
                             line-height: 50px;
                         }
                     }
+                    &:hover .support-image img{
+                        animation: hover 1s ease-in-out;
+                        opacity: 1;
+                    }
                 }
+                
             }
         }
     }
 }     
         
 
-
+@keyframes hover {
+    0%{
+        left:-265px;
+    }
+    100%{
+        left:0px;
+    }
+    
+}
+@-webkit-keyframes hover {
+    0%{
+        left:-265px;
+    }
+    100%{
+        left:0px;
+    }
+    
+}
 
 /* ==================End MyTeam=============== */
 
-.lovely-Work{
+#lovely-Work{
     padding: 60px;
     background: #3a454d;
     margin-bottom: 80px;
@@ -312,7 +361,7 @@ body{
 
 /* ==================End lovely work=============== */
 
-.mission{
+#mission{
     .mission-content{
         .head-mission{
             margin-bottom:40px;
@@ -351,7 +400,7 @@ body{
 
     /* ==================End Feature=============== */
 
-.features{
+#features{
     padding: 60px;
     padding-bottom:120px;
     background: #3a454d;
@@ -390,7 +439,7 @@ body{
 }
 
         /* ==================End Feature =============== */
-.map{
+#map-all{
     padding-top: 0px;
     padding-bottom:120px;
     margin-bottom: 80px;
