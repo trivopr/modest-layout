@@ -1,5 +1,8 @@
-@import '_variables.css';
 @import 'header.css';
+@import 'bg.css';
+.clear-fix{
+    clear: both;
+}
 header{
     background: #1d2126;
     /*position: fixed;
@@ -8,7 +11,14 @@ header{
     .header{
         padding-top: 22px;
         .logo{
-           padding-top:5px;
+           position: relative;
+           h1{
+               margin:0;
+               text-align: top;
+               img{
+                   position: absolute;
+               }
+           }
         }
         .navbar{
             
@@ -22,9 +32,11 @@ header{
                         color:#fff;
                         font-size:12px;
                         padding: 3px 7px;
+                        border:1px solid transparent;
                         &:hover{
                             background: none;
                             border:1px solid #5b6168;
+                           
                             border-radius:5px;
                             -webkit-border-radius:5px;
                             -moz-border-radius:5px;
@@ -35,11 +47,11 @@ header{
                         a{
                             color:#23b7a4;
                             border:1px solid #23b7a4;
+                            font-size:14px;
                             border-radius:5px;
                             -webkit-border-radius:5px;
                             -moz-border-radius:5px;
-                                &:hover{
-                                     
+                                &:hover{   
                                     border:1px solid #23b7a4;
                                     font-size:14px;
                             }
@@ -69,8 +81,8 @@ body{
 
 
 
-.bg{
-    background: url('../../image/bg.png') no-repeat fixed;
+#bg{
+    
     background-color: rgba(255, 255, 255,0.5);
     background-size: cover;
     background-position: center;
@@ -104,7 +116,7 @@ body{
 
 
 /* ==================End Background and banner=============== */
-.motto{
+#motto{
     margin-bottom: 80px;
     .head-motto{
         margin-bottom:30px;
@@ -121,9 +133,11 @@ body{
                 color:#8d8f92;
                 margin-bottom: 25px;
             }
+ 
             .motto-icon{
                padding-top: 15px;
-                .icon{
+               padding-left:0;
+                li{
                     background: #c8cdd0;
                     display: inline-block;
                     width: 60px;
@@ -131,11 +145,7 @@ body{
                     text-align: center;
                     line-height:60px;
                     margin-left:-2px;
-                    &:hover{
-                        opacity: 0.8;
-                        cursor: pointer;
-                    }
-                }
+                }       
             }
         }
         .right-motto-content{
@@ -171,7 +181,7 @@ body{
 
 /* ==================End Motto=============== */
         
-.myTeam{
+#myTeam{
     margin-bottom:100px;
     .members{
         .head-member{
@@ -187,10 +197,7 @@ body{
         .list-member{
             .member{
                 &:hover{
-                    cursor: pointer;
-                    img{
-                        opacity: 0.5;
-                    }
+                  
                     .information{
                         background: #3a454d;
                         color:#fff;
@@ -201,6 +208,7 @@ body{
                 .information{
                     background: #e1e6ea;
                     padding: 10px 0px 10px 20px;
+                    width: 265px;
                     h4{
                         font-size:16px;
                         margin:6px 0;
@@ -213,7 +221,25 @@ body{
                     position: relative;
                     text-align: center;
                     z-index: 1;
+                    .image{
+                        position: relative;
+                        width: 265px;
+                        height: 300px;
+                        overflow: hidden;
+                        img{
+                            position: absolute;
+                            z-index: 2;
+                            top:0;
+                            left:0;
+                        }
+                        .support-image img{
+                            opacity: 0;
+                        }
+                        
+                       
+                    }
                     .personal{
+                        display: none;
                         position: absolute;
                         text-align: center;
                         left:53px;
@@ -228,18 +254,40 @@ body{
                             line-height: 50px;
                         }
                     }
+                    &:hover .support-image img{
+                        animation: hover 1s ease-in-out;
+                        opacity: 1;
+                    }
                 }
+                
             }
         }
     }
 }     
         
 
-
+@keyframes hover {
+    0%{
+        left:-265px;
+    }
+    100%{
+        left:0px;
+    }
+    
+}
+@-webkit-keyframes hover {
+    0%{
+        left:-265px;
+    }
+    100%{
+        left:0px;
+    }
+    
+}
 
 /* ==================End MyTeam=============== */
 
-.lovely-Work{
+#lovely-Work{
     padding: 60px;
     background: #3a454d;
     margin-bottom: 80px;
@@ -263,6 +311,26 @@ body{
                 span{
                     position: absolute;
                     display: none;
+                }
+                figure{
+                    position: relative;
+                    overflow: hidden;
+                    &::before{
+                        position: absolute;
+                        height: 100%;
+                        width: 20%;
+                        background: linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,.5)) !important;
+                        top:0;
+                        content: '';
+                        left: -75%;
+                        z-index: 2;
+                        display: block;
+                        transform: skewX(-25deg);
+                    }
+                    &:hover::before{
+                        animation: shine 1.25s;
+                        -webkit-animation: shine 1.25s;
+                    }
                 }
                 .text{
                     position: absolute;
@@ -288,7 +356,6 @@ body{
                         display: inline;
                     }
                     img{
-                        opacity: 0.4;
                         cursor: pointer;
                     }
                 }            
@@ -310,9 +377,21 @@ body{
         }
 }
 
+@keyframes shine {
+    100%{
+        left:125%;
+    }
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+
 /* ==================End lovely work=============== */
 
-.mission{
+#mission{
     .mission-content{
         .head-mission{
             margin-bottom:40px;
@@ -351,14 +430,14 @@ body{
 
     /* ==================End Feature=============== */
 
-.features{
-    padding: 60px;
+#features{
+    
     padding-bottom:120px;
     background: #3a454d;
     margin-bottom: 60px;
         .head-feature{
             margin-bottom:40px;
-            margin-top:0px;
+            margin-top:60px;
             h3{
                 border-left: 10px solid #4e5a62;
                 box-sizing:border-box;
@@ -390,7 +469,7 @@ body{
 }
 
         /* ==================End Feature =============== */
-.map{
+#map-all{
     padding-top: 0px;
     padding-bottom:120px;
     margin-bottom: 80px;
@@ -463,10 +542,180 @@ footer{
     padding-bottom: 25px;
     .right-footer{
         padding-right: 0;
-       
         img{
             margin-left: 20px;
             float: right;
+        }
+    }
+}
+
+
+
+
+/* ==================End Footer =============== */
+
+@media only screen and (max-width:767px){
+    body{
+        .container{
+            width: 98%;
+            margin-left:0px;
+            padding:0 10px;
+        }
+        section{
+            padding: 10px;
+        }
+
+        #motto{
+            .motto-content{
+                .left-motto-content{
+                            .motto-icon{
+                            padding-right:30px;
+                            text-align: center;
+                            li{
+                                width: 45px;
+                                height: 45px;
+                                line-height: 45px;
+                            }
+                        }
+                }
+            }
+        }
+
+        .member{
+            text-align: center;
+        }
+        #motto .motto-content .right-motto-content .spirit{
+                margin: 40px 0;
+                height: auto;
+                .number{
+                padding-top:1px;
+                margin: 10px 0;
+                position: relative;
+                top: 0;
+            }
+        }
+        
+        .information{
+            padding: 10px 0px !important;
+            text-align:center;
+            width: 265px;
+        }
+        #features{
+            .all-feature{
+                    .feature{
+                        margin-bottom:50px;
+                        img{
+                            width: 100%;
+                            margin-bottom:15px;
+                        }
+                    }
+                }
+        }
+        #map-all{
+            padding-bottom: 0;
+            .map-footer{
+                .right-footer-content{
+                    padding-left:0;
+                    .form{
+                        height: 300px;
+                        position: relative;
+                        h4{
+                            display: inline-block;
+                            font-size: 14px;
+                            margin-bottom: 10px;
+                        }
+                        .name{
+                            margin-bottom:15px;
+                            /*border: 2px solid #ccc;
+                            border-radius: 5px;
+                            -webkit-border-radius:5px;
+                            -moz-border-radius:5px;*/
+                            input[type="text"]{
+                                margin:0;
+                                margin-top:5px;
+                                width: 60%;
+                                height: 25px;
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            .left-footer{
+                p{
+                    font-size: 8px;
+                }
+            }
+            .right-footer{
+                text-align: left;
+                padding-left: 0;
+                    img{
+                    float: none;
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+
+@media only screen and (max-width:992px) and (min-width:768px){
+    body{
+        h4{
+            font-size: 16px;
+        }
+    }
+    .container{
+        width: 100%;
+        padding: 10px;
+    }
+    #myTeam{
+        .member{
+            margin-bottom: 10px;
+            margin-left: 40px;
+        }
+    }
+
+    #features{
+        .all-feature{
+            .feature{
+                img{
+                    float: left;
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+    #map-all{
+        margin-bottom: 0;
+        padding-bottom: 40px;
+        .map-footer{
+            .right-footer-content{
+                .form{
+                    position: relative;
+                    top:0;
+                    .send{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .left-footer{
+            p{
+                font-size: 10px;
+            }
+        }
+        .right-footer{
+            text-align: center;
+            img{
+                float: none;
+            }
         }
     }
 }
