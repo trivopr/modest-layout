@@ -136,6 +136,7 @@ body{
  
             .motto-icon{
                padding-top: 15px;
+               padding-left:0;
                 li{
                     background: #c8cdd0;
                     display: inline-block;
@@ -207,6 +208,7 @@ body{
                 .information{
                     background: #e1e6ea;
                     padding: 10px 0px 10px 20px;
+                    width: 265px;
                     h4{
                         font-size:16px;
                         margin:6px 0;
@@ -235,7 +237,7 @@ body{
                         }
                         
                        
-                    }a
+                    }
                     .personal{
                         display: none;
                         position: absolute;
@@ -552,7 +554,7 @@ footer{
 
 /* ==================End Footer =============== */
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:767px){
     body{
         .container{
             width: 98%;
@@ -646,5 +648,65 @@ footer{
             }
         }
         
+    }
+}
+
+
+
+
+@media only screen and (max-width:992px) and (min-width:768px){
+    body{
+        h4{
+            font-size: 16px;
+        }
+    }
+    .container{
+        width: 100%;
+        padding: 10px;
+    }
+    #myTeam{
+        .member{
+            margin-bottom: 10px;
+            margin-left: 40px;
+        }
+    }
+
+    #features{
+        .all-feature{
+            .feature{
+                img{
+                    float: left;
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+    #map-all{
+        margin-bottom: 0;
+        padding-bottom: 40px;
+        .map-footer{
+            .right-footer-content{
+                .form{
+                    position: relative;
+                    top:0;
+                    .send{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .left-footer{
+            p{
+                font-size: 10px;
+            }
+        }
+        .right-footer{
+            text-align: center;
+            img{
+                float: none;
+            }
+        }
     }
 }
