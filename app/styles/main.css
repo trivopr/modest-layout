@@ -1,5 +1,5 @@
+@import '_variables.css';
 @import 'header.css';
-
 header{
     background: #1d2126;
     /*position: fixed;
