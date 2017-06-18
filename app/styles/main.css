@@ -584,8 +584,15 @@ footer{
         .member{
             text-align: center;
         }
-        .spirit{
-            margin: 40px 0;
+        #motto .motto-content .right-motto-content .spirit{
+                margin: 40px 0;
+                height: auto;
+                .number{
+                padding-top:1px;
+                margin: 10px 0;
+                position: relative;
+                top: 0;
+            }
         }
         
         .information{
@@ -605,6 +612,7 @@ footer{
                 }
         }
         #map-all{
+            padding-bottom: 0;
             .map-footer{
                 .right-footer-content{
                     padding-left:0;
@@ -641,9 +649,10 @@ footer{
                 }
             }
             .right-footer{
-                padding-left:0;
-                img{
-                    margin: 0 0 0 15px;
+                text-align: left;
+                padding-left: 0;
+                    img{
+                    float: none;
                 }
             }
         }
