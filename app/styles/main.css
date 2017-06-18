@@ -133,6 +133,7 @@ body{
                 color:#8d8f92;
                 margin-bottom: 25px;
             }
+ 
             .motto-icon{
                padding-top: 15px;
                 li{
@@ -143,11 +144,7 @@ body{
                     text-align: center;
                     line-height:60px;
                     margin-left:-2px;
-                    &:hover{
-                        opacity: 0.8;
-                        cursor: pointer;
-                    }
-                }
+                }       
             }
         }
         .right-motto-content{
@@ -313,6 +310,26 @@ body{
                     position: absolute;
                     display: none;
                 }
+                figure{
+                    position: relative;
+                    overflow: hidden;
+                    &::before{
+                        position: absolute;
+                        height: 100%;
+                        width: 20%;
+                        background: linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,.5)) !important;
+                        top:0;
+                        content: '';
+                        left: -75%;
+                        z-index: 2;
+                        display: block;
+                        transform: skewX(-25deg);
+                    }
+                    &:hover::before{
+                        animation: shine 1.25s;
+                        -webkit-animation: shine 1.25s;
+                    }
+                }
                 .text{
                     position: absolute;
                     top:210px;  
@@ -337,7 +354,6 @@ body{
                         display: inline;
                     }
                     img{
-                        opacity: 0.4;
                         cursor: pointer;
                     }
                 }            
@@ -358,6 +374,18 @@ body{
             }
         }
 }
+
+@keyframes shine {
+    100%{
+        left:125%;
+    }
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
 
 /* ==================End lovely work=============== */
 
