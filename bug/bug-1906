@@ -1,0 +1,27 @@
+## REPONSIVE CHUA DUOC ##
+
+## COMMON BUG ##
+- KO ĐC STYLE VÀO ID    // Đã nhắc nhiều lần
+
+##=========== BUG LAYOUT =============##
+
+#0: Hien tai layout bi broken tren device (F12 check device). Text bi lấn ra cả 2 bên.  // so sanh voi getbootstrap.com xem sao
+    vd: .container>.row>.col-xxx    // Rule cua bootstrap
+
+    - Xem trong image bug Reponsive
+    - Test = cach chon Device Mobile vs Tablet, Xoay ngang xoay dọc
+
+#1: Menu Top Reponsive chua thu nho nhu bootstrap // click moi toggle cai menu ra
+#2: MEET THE TEAM
+    - Reponsive tren tablet cho nay chua on 768->992, Hien tai cho trong nhieu qua. Nen cho 3 hinh 1 dong Hoac 2 hinh to ra
+
+#3: LOVELY WORK.
+    - Tren tablet Hover vao dau cong hien thi bi lech qua 1 ben. ko nam giua
+
+#4 WHAT WE DO 
+    - TREN TABLET NEN HIEN THI 2 -3 column, hien tai Text co 1 column nhin xau.
+
+#5: MAP
+    - Chua update nhu demo http://cams-omega.com/
+  
+
