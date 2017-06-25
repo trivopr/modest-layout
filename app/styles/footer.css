@@ -1,0 +1,11 @@
+.footer-content{
+    padding-top:25px;
+    padding-bottom: 20px;
+    p{
+        color:#fff;
+    }
+    img{
+        float:right;
+        margin-left:15px;
+    }
+}

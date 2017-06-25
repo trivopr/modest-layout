@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-        $('section[data-type="bg"]').each(function(){
+        $('section[data-type="background"]').each(function(){
             var $this=$(this);
             var $window=$(window);
             $window.scroll(function(){

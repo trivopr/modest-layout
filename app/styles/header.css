@@ -1,48 +1,36 @@
-header{
-    background: #1d2126;
-    /*position: fixed;
-    top:0;
-    width: 100%;*/    /*fixed-top bang css */
-    .header{
-        padding-top: 22px;
-        .logo{
-           padding-top:5px;
+
+.logo{
+    margin-top:15px;
+}
+.menu{
+    float: right;
+    li{
+        margin-left:20px;
+        border-radius:5px;
+        border: 1px solid transparent;
+        a{
+            padding:7px 12px;
+            color:#fff;
+            border:1px solid transparent;
+            &:hover,&:focus{
+                border:1px solid #fff;
+                background: none;
+                border-radius:5px;
+            }
         }
-        .navbar{
-            
-            background: #1d2126;;
-            border:none;
-            margin-bottom: 0;     
-            .nav{
-                li{
-                    margin: 0 9px;
-                    a{
-                        color:#fff;
-                        font-size:12px;
-                        padding: 3px 7px;
-                        &:hover{
-                            background: none;
-                            border:1px solid #5b6168;
-                            border-radius:5px;
-                            -webkit-border-radius:5px;
-                            -moz-border-radius:5px;
-                        }
-                    }
-                }
-                .active{
-                        a{
-                            color:#23b7a4;
-                            border:1px solid #23b7a4;
-                            border-radius:5px;
-                            -webkit-border-radius:5px;
-                            -moz-border-radius:5px;
-                                &:hover{
-                                     
-                                    border:1px solid #23b7a4;
-                                    font-size:14px;
-                            }
-                        }
-                    }
+        a.icon{
+            display: none;
+        }
+        
+    }
+    .active{
+        border: 1px solid #20766c;
+        a{
+            color:#20766c;
+            &:hover,&:focus{
+                border:1px solid #20766c;
+                background: none;
+                border-radius:5px;
             }
         }
     }

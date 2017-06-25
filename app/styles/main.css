@@ -1,550 +1,72 @@
 @import 'header.css';
 @import 'bg.css';
-.clear-fix{
-    clear: both;
+@import 'work.css';
+@import 'team.css';
+@import 'services.css';
+@import 'missions.css';
+@import 'features.css';
+@import 'contact.css';
+@import 'footer.css';
+
+body{
+    font-family: 'Arial',sans-serif;
+}
+ul,ol{
+    list-style: none;
 }
 header{
-    background: #1d2126;
-    /*position: fixed;
-    top:0;
-    width: 100%;*/    /*fixed-top bang css */
-    .header{
-        padding-top: 22px;
-        .logo{
-           position: relative;
-           h1{
-               margin:0;
-               text-align: top;
-               img{
-                   position: absolute;
-               }
-           }
-        }
-        .navbar{
-            
-            background: #1d2126;;
-            border:none;
-            margin-bottom: 0;     
-            .nav{
-                li{
-                    margin: 0 9px;
-                    a{
-                        color:#fff;
-                        font-size:12px;
-                        padding: 3px 7px;
-                        border:1px solid transparent;
-                        &:hover{
-                            background: none;
-                            border:1px solid #5b6168;
-                           
-                            border-radius:5px;
-                            -webkit-border-radius:5px;
-                            -moz-border-radius:5px;
-                        }
-                    }
-                }
-                .active{
-                        a{
-                            color:#23b7a4;
-                            border:1px solid #23b7a4;
-                            font-size:14px;
-                            border-radius:5px;
-                            -webkit-border-radius:5px;
-                            -moz-border-radius:5px;
-                                &:hover{   
-                                    border:1px solid #23b7a4;
-                                    font-size:14px;
-                            }
-                        }
-                    }
-            }
-        }
-    }
+    background:#1d2126;
+    padding-top:25px;
 }
-
-
-
-
-
-
-/* ==================End Header=============== */
-body{
-    font-family: Arial,sans-serif;
-    margin:0;
-    padding:0;
+section{
+    margin-bottom:50px;
+    padding: 50px 0;
+}
+.dark{
+    background: #3a454d;
 }
 .container{
-    width:1140px;
-    margin:0 auto;
-    padding:0;
+    width: 90%;
+    min-width: 998px;
+    margin: 0 auto;
 }
-
-
-
-#bg{
-    
-    background-color: rgba(255, 255, 255,0.5);
+#BG{
+    background: url('../../image/bg.png')  no-repeat fixed top right;
     background-size: cover;
-    background-position: center;
-    
-    height: 650px;
-    color:#fff;
-    .text-banner{
-        margin-top: 100px;
-        h3{
-            font-size:26px;
-            margin-bottom: 18px;
-        }
-        p{
-            font-weight: none;
-            opacity:0.7;
-            margin-bottom: 35px;
-        }
-        input[type="submit"]{
-            background: transparent;
-            border: 1px solid #fff;
-            margin-right: 7px;
-            box-sizing: border-box;
-            &:hover{
-                background: #23b7a4;
-                
-                border:none;
-            }
-        }
-    }
 }
-
-
-/* ==================End Background and banner=============== */
-#motto{
-    margin-bottom: 80px;
-    .head-motto{
-        margin-bottom:30px;
-        margin-top:20px;
-        h3{
-            border-left: 7px solid #e1e6ea;
-            box-sizing:border-box;
-            padding-left: 12px;   
-        }
+a.btn.btn-success{
+    position: relative;
+    overflow: hidden;
+    width: 130px;
+    height: 50px;
+    margin-right: 20px;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        left:-25%;
+        top: 0;
+        z-index: 2;
+        background: #2db6ed;
+        transition: width 0.5s ease-in-out;
     }
-    .motto-content{
-        .left-motto-content{
-            p{
-                color:#8d8f92;
-                margin-bottom: 25px;
-            }
- 
-            .motto-icon{
-               padding-top: 15px;
-               padding-left:0;
-                li{
-                    background: #c8cdd0;
-                    display: inline-block;
-                    width: 60px;
-                    height: 60px;
-                    text-align: center;
-                    line-height:60px;
-                    margin-left:-2px;
-                }       
-            }
-        }
-        .right-motto-content{
-            padding-right:0;
-            .spirit{
-                margin-bottom: 20px;
-                height: 80px;
-                .number{
-                    position: relative;
-                    background: #23b7a4;
-                    text-align: center;
-                    height: 37px;
-                    padding: 0;
-                    h6{
-                        color:#fff;
-                        margin-top:12px;
-                    }
-                }
-                .spirit-content{
-                    position: relative;
-                    padding-right: 0;
-                    h4{
-                        margin-top:0;
-                    }
-                    p{
-                        color:#8d8f92;
-                    }
-                }
-            }
-        }
+    &:hover::before{
+        width: 130%;
     }
-}
-
-/* ==================End Motto=============== */
-        
-#myTeam{
-    margin-bottom:100px;
-    .members{
-        .head-member{
-            margin-bottom:40px;
-            margin-top:30px;
-            h3{
-                border-left: 10px solid #e1e6ea;
-                box-sizing:border-box;
-                padding-left: 12px;  
-                padding-top:5px; 
-            }
-        }
-        .list-member{
-            .member{
-                &:hover{
-                  
-                    .information{
-                        background: #3a454d;
-                        color:#fff;
-                    }
-                }
-                padding-right:5px;
-            
-                .information{
-                    background: #e1e6ea;
-                    padding: 10px 0px 10px 20px;
-                    width: 265px;
-                    h4{
-                        font-size:16px;
-                        margin:6px 0;
-                    }
-                    .competence{
-                        color: #a6a9ac;
-                    }
-                }
-                .image-member{
-                    position: relative;
-                    text-align: center;
-                    z-index: 1;
-                    .image{
-                        position: relative;
-                        width: 265px;
-                        height: 300px;
-                        overflow: hidden;
-                        img{
-                            position: absolute;
-                            z-index: 2;
-                            top:0;
-                            left:0;
-                        }
-                        .support-image img{
-                            opacity: 0;
-                        }
-                        
-                       
-                    }
-                    .personal{
-                        display: none;
-                        position: absolute;
-                        text-align: center;
-                        left:53px;
-                        top:125px;
-                        z-index: 2;
-                        a{
-                            display: inline-block;
-                            width: 50px;
-                            height: 50px;
-                            background: #3a454d;
-                            text-align: center;
-                            line-height: 50px;
-                        }
-                    }
-                    &:hover .support-image img{
-                        animation: hover 1s ease-in-out;
-                        opacity: 1;
-                    }
-                }
-                
-            }
-        }
+    span{
+        position: absolute;
+        z-index: 3;
+        top: 12px;
+        left: 26px;
+        font-size: 16px;
+        font-weight: bold;
+        color:#2db6ed;
+        transition: color 0.5s ease-in-out;
     }
-}     
-        
-
-@keyframes hover {
-    0%{
-        left:-265px;
-    }
-    100%{
-        left:0px;
-    }
-    
-}
-@-webkit-keyframes hover {
-    0%{
-        left:-265px;
-    }
-    100%{
-        left:0px;
-    }
-    
-}
-
-/* ==================End MyTeam=============== */
-
-#lovely-Work{
-    padding: 60px;
-    background: #3a454d;
-    margin-bottom: 80px;
-        .head-lovely-work{
-            margin-bottom:40px;
-            margin-top:30px;
-            h3{
-                border-left: 10px solid #4e5a62;
-                box-sizing:border-box;
-                padding-left: 12px;  
-                padding-top:5px;
-                color:#e1e6ea; 
-                font-size: 25px;
-            }
-        }
-        .all-works{
-            .work{
-                margin-bottom: 25px;
-                padding-right:0;
-                position: relative;
-                span{
-                    position: absolute;
-                    display: none;
-                }
-                figure{
-                    position: relative;
-                    overflow: hidden;
-                    &::before{
-                        position: absolute;
-                        height: 100%;
-                        width: 20%;
-                        background: linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,.5)) !important;
-                        top:0;
-                        content: '';
-                        left: -75%;
-                        z-index: 2;
-                        display: block;
-                        transform: skewX(-25deg);
-                    }
-                    &:hover::before{
-                        animation: shine 1.25s;
-                        -webkit-animation: shine 1.25s;
-                    }
-                }
-                .text{
-                    position: absolute;
-                    top:210px;  
-                    background: #292f36;
-                    color:#fff;
-                    font-size:20px;
-                    width: 96%;
-                    padding:20px 0 20px 18px;
-                }
-                .icon-plus{
-                    color:#fff;
-                    font-size: 20px;
-                    top:100.5px;
-                    left:190px;
-                }
-                img{
-                    width: 100%;
-                    height: auto;
-                }
-                &:hover{
-                    span{
-                        display: inline;
-                    }
-                    img{
-                        cursor: pointer;
-                    }
-                }            
-            }
-        }
-        
-
-        .footer-lovely-work{
-            text-align: center;
-            margin-top:40px;
-            .show-more{
-                background: transparent;
-                border: 3px solid #fff;
-                padding: 8px 23px;
-                &:hover{
-                    background: #3b7ced;
-                }
-            }
-        }
-}
-
-@keyframes shine {
-    100%{
-        left:125%;
-    }
-}
-@-webkit-keyframes shine {
-	100% {
-		left: 125%;
-	}
-}
-
-
-/* ==================End lovely work=============== */
-
-#mission{
-    .mission-content{
-        .head-mission{
-            margin-bottom:40px;
-            margin-top:30px;
-            h3{
-                border-left: 10px solid #e1e6ea;
-                box-sizing:border-box;
-                padding-left: 12px;  
-                padding-top:5px;
-                font-size: 25px;
-                font-weight: bold;
-            }
-        }
-        
-
-        .all-mission{
-            text-align: center;
-            .mission{
-                margin-bottom: 65px;
-                img{
-                    margin-bottom: 20px;
-                }
-                h4{
-                    margin-bottom: 15px;
-                    font-weight: bold;
-                    font-size: 20px
-                }
-                p{
-                    font-size:17px;
-                    color:#b0b1b3;
-                }
-            }
-        }
-    }
-}
-
-    /* ==================End Feature=============== */
-
-#features{
-    
-    padding-bottom:120px;
-    background: #3a454d;
-    margin-bottom: 60px;
-        .head-feature{
-            margin-bottom:40px;
-            margin-top:60px;
-            h3{
-                border-left: 10px solid #4e5a62;
-                box-sizing:border-box;
-                padding-left: 12px;  
-                padding-top:5px;
-                color:#e1e6ea; 
-                font-size: 25px;
-            }
-        }
-        
-
-        .all-feature{
-            color:#fff;
-            .feature{
-                img{
-                    margin-bottom: 35px;
-                }
-                h4{
-                    font-size: 20px;
-                    margin-bottom:20px;
-                }
-                p{
-                    color: #dcdfe1;
-                    line-height: 1.7em;
-                    font-size: 14px;
-                }
-            }
-        }
-}
-
-        /* ==================End Feature =============== */
-#map-all{
-    padding-top: 0px;
-    padding-bottom:120px;
-    margin-bottom: 80px;
-        .head-map{
-            margin-bottom:60px;
-            margin-top:0px;
-            h3{
-                border-left: 10px solid #e1e6ea;
-                box-sizing:border-box;
-                padding-left: 12px;  
-                padding-top:5px;
-                font-size: 25px;
-            }
-        }
-        .map-footer{
-            margin-bottom:80px;
-            .left-footer-content{
-                margin-top:40px;
-                h3{
-                    margin-bottom: 30px;
-                    margin-left: 12px;
-                }
-                p{
-                    margin-bottom: 20px;
-                    opacity: 0.6;
-                }
-            }
-            .right-footer-content{
-                position: relative;
-                .form{
-                    position: absolute;
-                    width: 100%;
-                    height: 500px;
-                    padding:20px;
-                    top:-100px;
-                    background: #fff;
-                    input[type="text"],textarea{
-                        width: 100%;
-                        background: #eaeef1;
-                        border:none;
-                        border-radius:5px;
-                        -webkit-border-radius:5px;
-                        -moz-border-radius:5px;
-                         margin-bottom:20px;
-                    }
-                     input[type="text"]{
-                         height: 40px;
-                        
-                     }
-                     h4{
-                         color:#8d8f92;
-                     }
-                     input[type="submit"]{
-                         background:#23b7a4;
-                         padding:10px 30px;
-                     }
-                }
-            }
-        }
-}
-
-
-
-/* ==================End Map =============== */
-
-footer{
-    background: #3a454d;
-    color:#fff;
-    padding-top:40px;
-    padding-bottom: 25px;
-    .right-footer{
-        padding-right: 0;
-        img{
-            margin-left: 20px;
-            float: right;
+    &:hover{
+        span{
+            color: #fff;
         }
     }
 }
@@ -552,170 +74,140 @@ footer{
 
 
 
-/* ==================End Footer =============== */
-
-@media only screen and (max-width:767px){
-    body{
-        .container{
-            width: 98%;
-            margin-left:0px;
-            padding:0 10px;
-        }
-        section{
-            padding: 10px;
-        }
-
-        #motto{
-            .motto-content{
-                .left-motto-content{
-                            .motto-icon{
-                            padding-right:30px;
-                            text-align: center;
-                            li{
-                                width: 45px;
-                                height: 45px;
-                                line-height: 45px;
-                            }
-                        }
-                }
-            }
-        }
-
-        .member{
-            text-align: center;
-        }
-        #motto .motto-content .right-motto-content .spirit{
-                margin: 40px 0;
-                height: auto;
-                .number{
-                padding-top:1px;
-                margin: 10px 0;
-                position: relative;
-                top: 0;
-            }
-        }
-        
-        .information{
-            padding: 10px 0px !important;
-            text-align:center;
-            width: 265px;
-        }
-        #features{
-            .all-feature{
-                    .feature{
-                        margin-bottom:50px;
-                        img{
-                            width: 100%;
-                            margin-bottom:15px;
-                        }
-                    }
-                }
-        }
-        #map-all{
-            padding-bottom: 0;
-            .map-footer{
-                .right-footer-content{
-                    padding-left:0;
-                    .form{
-                        height: 300px;
-                        position: relative;
-                        h4{
-                            display: inline-block;
-                            font-size: 14px;
-                            margin-bottom: 10px;
-                        }
-                        .name{
-                            margin-bottom:15px;
-                            /*border: 2px solid #ccc;
-                            border-radius: 5px;
-                            -webkit-border-radius:5px;
-                            -moz-border-radius:5px;*/
-                            input[type="text"]{
-                                margin:0;
-                                margin-top:5px;
-                                width: 60%;
-                                height: 25px;
-                                float: right;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        footer{
-            .left-footer{
-                p{
-                    font-size: 8px;
-                }
-            }
-            .right-footer{
-                text-align: left;
-                padding-left: 0;
-                    img{
-                    float: none;
-                }
-            }
-        }
-        
-    }
-}
 
 
 
 
-@media only screen and (max-width:992px) and (min-width:768px){
-    body{
-        h4{
-            font-size: 16px;
-        }
-    }
+@media only screen and (min-width:768px) and (max-width:990px){
     .container{
-        width: 100%;
-        padding: 10px;
+        width: 90%;
+        margin: 0 auto;
+        min-width: 768px;
     }
-    #myTeam{
-        .member{
-            margin-bottom: 10px;
-            margin-left: 40px;
+    .feature{
+        margin-bottom: 30px;
+        img{
+            margin-bottom:20px;
         }
     }
+    .rule{
+        .number{
+            h3{
+                margin-top:7px;
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+        }
+    }
+}
 
-    #features{
-        .all-feature{
-            .feature{
-                img{
-                    float: left;
-                    margin-right: 30px;
-                }
-            }
-        }
+
+@media only screen and  (max-width:767px){
+    .container{
+        width:100%;
+        min-width: 360px;
     }
-    #map-all{
-        margin-bottom: 0;
-        padding-bottom: 40px;
-        .map-footer{
-            .right-footer-content{
-                .form{
-                    position: relative;
-                    top:0;
-                    .send{
-                        text-align: center;
-                    }
-                }
-            }
-        }
+    section{
+        padding: 0;
     }
-    footer{
-        .left-footer{
-            p{
-                font-size: 10px;
-            }
-        }
-        .right-footer{
+    .myteam{
+        .member{
             text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+    .features{
+        .feature{
+            margin-bottom: 40px;
             img{
+                width: 98%;
+                margin-bottom: 20px;
+            }
+            h4{
+                margin-bottom: 15px;
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+    }
+    .rule{
+        h4{
+            font-size:15px;
+            text-align: center;
+        }
+    }
+    .logo{
+        float: left;
+        text-align: center;
+    }
+    /*.menu{
+        li{
+            a{
+                display: none;
+            }
+            a.icon{
+                display: block;
+                float: right;
+            }
+        }
+        .active{
+            border: none;
+        }
+    }
+    .menu.responsive {position: relative;}
+    .menu.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .menu.responsive li{
+            a{
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }*/
+    .menu{
+        li{
+            a{
+                display: none;
+                margin-right:15px;
+            }
+            a.icon{
+                display: block;
+                float: right;
+                margin-bottom: 20px;
+                margin-top:-10px;
+                margin-right:15px;
+                border: 1px solid #fff;
+                border-radius:5px;
+            }
+        }
+        .active{
+            border: none;
+        }
+    }
+    
+
+  .navbar.responsive {position: relative;}
+  
+  .navbar.responsive {
+      .menu{
+          width: 100%;
+            li{
+            display: block;
+            text-align: center;
+            a{
+                display: block;
+                text-align: center;;
+            }
+            a.icon{
                 float: none;
             }
         }
-    }
+      }
+  }
 }
+
+
+

@@ -1,0 +1,22 @@
+.missions{
+    h3{
+        border-left:8px solid #e1e6ea;
+        padding-left:7px;
+        margin-bottom: 45px;
+    }
+    .mission{
+        text-align: center;
+        margin-bottom: 80px;
+        img{
+            margin-bottom:25px;
+        }
+        h4{
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        p{
+            line-height: 1.5em;
+            opacity: 0.7;
+        }
+    }
+}
